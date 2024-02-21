@@ -1,0 +1,3 @@
+contao_captcha:
+  resource: '../src/Controller'
+  type: annotation

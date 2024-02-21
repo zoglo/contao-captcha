@@ -1,0 +1,48 @@
+{
+  "name": "zoglo/contao-captcha",
+  "type": "contao-bundle",
+  "description": "Embeds the latest contao captcha functionality into old Contao CMS",
+  "keywords": [
+    "contao",
+    "driver",
+    "config"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sebastian Zoglowek",
+      "homepage": "https://github.com/zoglo",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "contao/core-bundle": "4.9.*"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.3.1"
+  },
+  "conflict": {
+    "contao/core": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Zoglo\\ContaoCaptcha\\": "src/"
+    },
+    "classmap": [
+      "contao/"
+    ],
+    "exclude-from-classmap": [
+      "contao/config/",
+      "contao/dca/",
+      "contao/languages/",
+      "contao/templates/"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    },
+    "contao-manager-plugin": "Zoglo\\ContaoCaptcha\\ContaoManager\\Plugin"
+  }
+}

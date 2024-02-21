@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: true
+
+  Zoglo\ContaoCaptcha\Controller\CaptchaController:
+    arguments:
+      - '@contao.framework'
+      - '%kernel.project_dir%'
+    tags:
+      - controller.service_arguments
