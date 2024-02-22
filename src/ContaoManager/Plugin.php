@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Zoglo\ContaoCaptcha\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
+use Contao\NewsletterBundle\NewsletterBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
@@ -23,6 +24,7 @@ class Plugin implements BundlePluginInterface, RoutingPluginInterface
         return [
             BundleConfig::create(ContaoCaptcha::class)
                 ->setLoadAfter([ContaoCoreBundle::class])
+                ->setLoadAfter([NewsletterBundle::class])
                 ->setReplace(['contao-captcha']),
         ];
     }

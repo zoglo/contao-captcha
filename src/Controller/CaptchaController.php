@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Zoglo\ContaoCaptcha\Controller;
 
-
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\System;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
