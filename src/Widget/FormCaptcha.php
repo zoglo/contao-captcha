@@ -1,6 +1,10 @@
 <?php
 
-namespace Contao;
+namespace Zoglo\ContaoCaptcha\Widget;
+
+use Contao\Input;
+use Contao\System;
+use Contao\Widget;
 
 /**
  * Class FormCaptcha

@@ -1,11 +1,13 @@
 {
   "name": "zoglo/contao-captcha",
   "type": "contao-bundle",
-  "description": "Embeds the latest contao captcha functionality into old Contao CMS",
+  "description": "Integrates the 'new' captcha into Contao 4.9.x",
   "keywords": [
     "contao",
-    "driver",
-    "config"
+    "captcha",
+    "4.9",
+    "spam",
+    "form"
   ],
   "license": "MIT",
   "authors": [
