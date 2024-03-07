@@ -21,12 +21,15 @@ class Plugin implements BundlePluginInterface, RoutingPluginInterface
      */
     public function getBundles(ParserInterface $parser): array
     {
-        return [
-            BundleConfig::create(ContaoCaptcha::class)
-                ->setLoadAfter([ContaoCoreBundle::class])
-                ->setLoadAfter([ContaoNewsletterBundle::class])
-                ->setReplace(['contao-captcha']),
-        ];
+        $config = BundleConfig::create(ContaoCaptcha::class)
+            ->setLoadAfter([ContaoCoreBundle::class]);
+
+        if (class_exists(ContaoNewsletterBundle::class))
+        {
+            $config->setLoadAfter([ContaoNewsletterBundle::class]);
+        }
+
+        return [$config->setReplace(['contao-captcha'])];
     }
 
     /**
